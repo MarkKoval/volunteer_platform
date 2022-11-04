@@ -10,33 +10,17 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {MyButton,FooterBox} from '../../modules/Shared/For_All'
-
-const theme = createTheme({
-    palette: {
-        type: 'light',
-        primary: {
-        main: '#ff8c00',
-        light: '#fd9a20',
-        dark: '#a45b00',
-        contrastText: '#ffffff',
-      },
-        secondary: {
-        main: '#ffffff',
-      },
-        background: {
-        default: '#ffea98',
-      },
-    },
-  });
+import {ThemeProvider } from '@mui/material/styles';
+import {MyButton} from '../../modules/Shared/For_All.styled'
+import { default_theme } from '../../modules/Shared/theme';
+import Footer from '../../modules/Shared/Footer';
 
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Photos() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={default_theme}>
       <CssBaseline />
       <main>
         <Box
@@ -106,28 +90,7 @@ export default function Photos() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <FooterBox sx={{ p: 0.1 }} component="footer">
-      <Typography
-         variant="h1" 
-         align="center" 
-         color="text.secondary"
-         fontSize="40px"
-         paragraph
-         fontWeight="750"
-         marginTop="50px">
-          Footer
-        </Typography>
-        <Typography
-          variant="h1" 
-          align="center" 
-          color="text.secondary"
-          fontSize="15px"
-          paragraph
-          fontWeight="600">
-          Something here to give the footer a purpose!
-        </Typography>
-      </FooterBox>
+      <Footer/>
     </ThemeProvider>
   );
 }
