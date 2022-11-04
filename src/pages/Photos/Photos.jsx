@@ -10,14 +10,8 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import styled from '@emotion/styled';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
-const FooterBox = styled(Box)({
-    background: 'linear-gradient(to bottom, #ffea98, #fbdd81, #f8cf6a, #f5c153, #f3b23c, #f2ab31, #f2a526, #f19e18, #f19e18, #f19e18, #f19e18, #f19e18)',
-    boxShadow: '0 0 0 0',
-  });
+import {MyButton,FooterBox} from '../../modules/For_All/For_All'
 
 const theme = createTheme({
     palette: {
@@ -40,20 +34,7 @@ const theme = createTheme({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const MyButton = styled(Button)({
-    background: 'linear-gradient(to right bottom, #dc9104, #e09c1a, #e4a729, #e7b137, #ebbc44)',
-    border: 0,
-    borderRadius: 8,
-    boxShadow: '0 0 6px 2px rgba(255, 105, 135, .2)',
-    color: 'white',
-    height: 38,
-    padding: '0 30px',
-    fontSize: '14px',
-    fontFamily: 'Nunito',
-    fontWeight: 700,
-  });
-
-export default function Photo() {
+export default function Photos() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
