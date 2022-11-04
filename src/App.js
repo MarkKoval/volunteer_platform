@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import ResponsiveAppBar from "./modules/App_Bar/AppBar";
+import ResponsiveAppBar from "./modules/Shared/AppBar";
 import Home from "./pages/Home/Home";
 import Organization from "./pages/Organization/Organization";
 import Volunteer from "./pages/Volunteer/Volunteer";

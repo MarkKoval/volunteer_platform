@@ -9,7 +9,7 @@ import { createTheme } from "@mui/material/styles";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Link } from 'react-router-dom';
-import {MyButton,FooterBox} from '../../modules/For_All/For_All'
+import {MyButton,FooterBox} from '../../modules/Shared/For_All'
 
 const back = createTheme({
     palette: {

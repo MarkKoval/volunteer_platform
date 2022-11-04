@@ -7,7 +7,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from "@mui/material/styles";
 import TextField from '@mui/material/TextField';
 import { Grid } from '@mui/material';
-import {FooterBox} from '../../modules/For_All/For_All'
+import {FooterBox} from '../../modules/Shared/For_All'
 
 const back = createTheme({
     palette: {

@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {MyButton,FooterBox} from '../../modules/For_All/For_All'
+import {MyButton,FooterBox} from '../../modules/Shared/For_All'
 
 const theme = createTheme({
     palette: {
