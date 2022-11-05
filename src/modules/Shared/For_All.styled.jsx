@@ -11,6 +11,5 @@ export const MyButton = styled(Button)({
   height: 48,
   padding: '0 30px',
   fontSize: '18px',
-  fontFamily: 'Nunito',
   fontWeight: 700,
 });

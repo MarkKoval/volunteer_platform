@@ -9,9 +9,10 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Link } from 'react-router-dom';
 import {MyButton} from '../../modules/Shared/For_All.styled';
-import { itemData } from '../../modules/Home/Components/Home.Components';
 import { default_theme } from '../../modules/Shared/theme';
 import Footer from '../../modules/Shared/Footer';
+import { TitlePhotos } from '../../modules/Home/Components/Constants/Photos';
+import '../../index.css'
 
 export default function Home() {
     
@@ -30,7 +31,7 @@ export default function Home() {
         <Container maxWidth="s">
           <Typography
             component="h1"
-            variant="h1"
+            fontFamily="Nunito"
             align="center"
             color="text.primary"
             fontSize="75px"
@@ -39,23 +40,24 @@ export default function Home() {
           >
             ВІДКРИЙ СВІТ ВОЛОНТЕРСТВА!
           </Typography>
-          <Typography 
+          <Typography
+          fontFamily="Nunito" 
           variant="h1" 
           align="center" 
           color="text.secondary"
           fontSize="30px"
           paragraph
-          fontWeight="300"
+          fontWeight="450"
           >
           Сотні можливостей та однодумців вже чекають на тебе
           </Typography>
 
           <Stack>
-      <Stack spacing={2} alignItems="center" marginTop={5}>
+      <Stack spacing={2} alignItems="center">
       <Box sx={{pt: 8,
           pb: 6,}}>
       <ImageList variant="masonry" cols={5} gap={8}>
-        {itemData.map((item) => (
+        {TitlePhotos.map((item) => (
           <ImageListItem key={item.img}>
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}
