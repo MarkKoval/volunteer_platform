@@ -13,8 +13,6 @@ import { itemData } from '../../modules/Home/Components/Home.Components';
 import { default_theme } from '../../modules/Shared/theme';
 import Footer from '../../modules/Shared/Footer';
 
-
-
 export default function Home() {
     
     return (

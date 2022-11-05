@@ -33,5 +33,4 @@ const FooterBox = styled(Box)({
       </Typography>
     </FooterBox>
     )
-    
     }

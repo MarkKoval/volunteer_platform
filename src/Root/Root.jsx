@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import ResponsiveAppBar from "./modules/Shared/AppBar";
-import Home from "./pages/Home/Home";
-import Organization from "./pages/Organization/Organization";
-import Volunteer from "./pages/Volunteer/Volunteer";
-import Photos from "./pages/Photos/Photos";
+import ResponsiveAppBar from "../modules/Shared/AppBar";
+import Home from "../pages/Home/Home";
+import Organization from "../pages/Organization/Organization";
+import Volunteer from "../pages/Volunteer/Volunteer";
+import Photos from "../pages/Photos/Photos";
 
 function App() {
     return (
@@ -14,7 +14,6 @@ function App() {
                 <Route path="Organization" element={<Organization />} />
                 <Route path="Volunteer" element={<Volunteer />} />
                 <Route path="Photos" element={<Photos />} />
-
             </Routes>
         </div>
     )
