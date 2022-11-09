@@ -12,7 +12,7 @@ export default function Organization() {
       <Box
         sx={{
           pt: 8,
-          pb: 6,
+          pb: 8,
         }}
       >
         <Container maxWidth="s">

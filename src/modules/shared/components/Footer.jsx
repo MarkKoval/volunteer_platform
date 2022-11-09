@@ -5,12 +5,12 @@ import Typography from "@mui/material/Typography";
 const FooterBox = styled(Box)({
   background:
     "linear-gradient(to bottom, #ffea98, #fbdd81, #f8cf6a, #f5c153, #f3b23c, #f2ab31, #f2a526, #f19e18, #f19e18, #f19e18, #f19e18, #f19e18)",
-  boxShadow: "0 0 0 0",
+  boxShadow: "0 0 0 0"
 });
 
 export default function Footer() {
   return (
-    <FooterBox sx={{ p: 0.1 }} component="footer">
+    <FooterBox sx={{ p: 0.1 }} component="footer" marginTop="50px">
       <Typography
         variant="h1"
         align="center"
