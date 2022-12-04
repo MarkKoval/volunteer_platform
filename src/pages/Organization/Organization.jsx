@@ -39,13 +39,13 @@ export default function Organization() {
           </Typography>
         </Container>
       </Box>
-
-      <Box
+      <Box align="center">
+       <Box
         sx={{ flexGrow: 1, "& .MuiTextField-root": { m: 1, width: "25ch" } }}
       >
-        <h1 align="left">Про захід</h1>
         <Grid container spacing={2} columns={16}>
           <Grid xs={6}>
+          <h1 align="center">Про захід</h1>
             <TextField
               required
               fullWidth
@@ -85,7 +85,9 @@ export default function Organization() {
             />
           </Grid>
         </Grid>
+      </Box> 
       </Box>
+      
       <Footer />
     </Box>
   );

@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-const pages = ["Organization", "Volunteer", "Photos"];
+const pages = ["Organization", "Volunteer", "Photos", "Test"];
 const settings = ["Profile", "Account", "Messages", "Logout"];
 
 function ResponsiveAppBar() {
@@ -38,17 +38,20 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      position="static"
       style={{
         background:
-          "linear-gradient(to right bottom, #dc9104, #e09c1a, #e4a729, #e7b137, #ebbc44)",
+          "linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0))",
+        backdropFilter: "blur(6px)",
+        boxShadow: "10px 10px 10px rgba(30,30,30,0.15)",
+        height: 80,
+        justifyContent: "center",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/"
@@ -99,7 +102,7 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center">
                     <Link
                       to={`/${page}`}
-                      style={{ textDecoration: "none", color: "white" }}
+                      style={{ textDecoration: "none", color: "inherit" }}
                     >
                       {page}
                     </Link>
@@ -136,7 +139,7 @@ function ResponsiveAppBar() {
               >
                 <Link
                   to={`/${page}`}
-                  style={{ textDecoration: "none", color: "white" }}
+                  style={{ textDecoration: "none", color: "black", fontWeight: "700" }}
                 >
                   {page}
                 </Link>
