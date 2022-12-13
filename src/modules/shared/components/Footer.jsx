@@ -4,8 +4,8 @@ import Typography from "@mui/material/Typography";
 
 const FooterBox = styled(Box)({
   background:
-    "linear-gradient(to bottom, #ffea98, #fbdd81, #f8cf6a, #f5c153, #f3b23c, #f2ab31, #f2a526, #f19e18, #f19e18, #f19e18, #f19e18, #f19e18)",
-  boxShadow: "0 0 0 0"
+    "radial-gradient(at 0% 100%, hsla(261,75%,79%,1) 0px, transparent 50%),\nradial-gradient(at 74% 100%, hsla(195,54%,66%,1) 0px, transparent 50%),\nradial-gradient(at 48% 100%, hsla(200,76%,63%,1) 0px, transparent 50%),\nradial-gradient(at 98% 100%, hsla(195,72%,71%,1) 0px, transparent 50%),\nradial-gradient(at 1% 100%, hsla(261,53%,59%,1) 0px, transparent 50%)",
+  boxShadow: "0 0 0 0",
 });
 
 export default function Footer() {

@@ -7,12 +7,13 @@ import Photos from "../pages/photos/Photos";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { default_theme } from "../modules/shared/components/Theme";
 import Test from "../pages/test/Test";
+import { BackgroundBox } from "../modules/shared/components/BackgroundBox";
 
 function App() {
   return (
     <ThemeProvider theme={default_theme}>
       <CssBaseline />
-      <div>
+      <BackgroundBox>
         <ResponsiveAppBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path="Photos" element={<Photos />} />
           <Route path="Test" element={<Test />} />
         </Routes>
-      </div>
+      </BackgroundBox>
     </ThemeProvider>
   );
 }

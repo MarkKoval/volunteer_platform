@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Root from "./root/Root";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { default_theme } from "./modules/shared/components/Theme";
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
