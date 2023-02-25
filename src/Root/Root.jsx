@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import ResponsiveAppBar from "../modules/shared/components/AppBar";
-import Home from "../pages/home/Home";
-import Organization from "../pages/organization/Organization";
-import Volunteer from "../pages/volunteer/Volunteer";
-import Photos from "../pages/photos/Photos";
+import Home from "../pages/Home/Home";
+import Organization from "../pages/Organization/Organization";
+import Volunteer from "../pages/Volunteer/Volunteer";
+import Photos from "../pages/Photos/Photos";
 import Test from "../pages/test/Test";
 import { BackgroundBox } from "../modules/shared/components/BackgroundBox";
 
