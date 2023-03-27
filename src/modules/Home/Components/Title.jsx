@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 
-export default function TitleTest() {
+export default function Title() {
   return (
     <div>
       <LineBox>

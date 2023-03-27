@@ -1,25 +1,12 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
-import { Grid } from "@mui/material";
 import Footer from "../../modules/shared/components/Footer";
 import { LineBox } from "../../modules/shared/components/LineBox";
 import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import { useState } from "react";
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  // handle form submission here
-};
 
 export default function Test() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   return (
     <Box>
       <LineBox>
@@ -172,41 +159,6 @@ export default function Test() {
             />
           </Stack>
         </Box>
-      </Box>
-
-      <Box display="flex" flexDirection="column">
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-          <TextField
-            label="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-          <TextField
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <TextField
-            label="Message"
-            multiline
-            rows={4}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-          <Button type="submit" variant="contained" color="primary">
-            Submit
-          </Button>
-        </form>
       </Box>
 
       <Footer />
