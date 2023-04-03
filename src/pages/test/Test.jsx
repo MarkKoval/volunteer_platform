@@ -5,8 +5,18 @@ import TextField from "@mui/material/TextField";
 import Footer from "../../modules/shared/components/Footer";
 import { LineBox } from "../../modules/shared/components/LineBox";
 import Stack from "@mui/material/Stack";
+import { useForm } from "react-hook-form";
+import { Input, OutlinedInput } from "@mui/material";
 
 export default function Test() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
+
   return (
     <Box>
       <LineBox>
@@ -77,7 +87,7 @@ export default function Test() {
       >
         <Box
           sx={{
-            width: "65%",
+            width: "58%",
             backgroundImage:
               "linear-gradient(180deg, rgba(191,198,227,0) 0%, rgba(191,198,227,1) 20%, rgba(191,198,227,1) 80%, rgba(191,198,227,0) 100%)",
             justifyContent: "center",
@@ -89,75 +99,122 @@ export default function Test() {
             paddingBottom: "25px",
           }}
         >
-          <Stack
-            spacing={5}
-            direction="row"
-            sx={{
+            <form onSubmit={handleSubmit(onSubmit)} sx={{
+              marginBottom:"20px",
+              marginTop: "20px",
               justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              flexFlow: "row",
-            }}
-          >
-            <Box>
-              <Stack>
-                <Typography
-                  component="h1"
-                  fontFamily="Nunito"
-                  align="center"
-                  color="#1E1E1E"
-                  fontSize="25px"
-                  gutterBottom
-                  fontWeight="800"
-                  marginBottom="15px"
-                >
-                  РЕЄСТРУЙТЕ ПОДІЮ ТУТ!
-                </Typography>
-                <Stack
-                  direction="row"
-                  spacing={2}
-                  justifyContent="center"
-                  marginBottom={2}
-                >
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Назва події"
-                    defaultValue="Велосотка 2022"
-                  />
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Організатор"
-                    defaultValue="UnionRun"
-                  />
-                </Stack>
-              </Stack>
+            }}>
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="First name"
+                {...register("First name", { required: true, maxLength: 80 })}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="Last name"
+                {...register("Last name", { required: true, maxLength: 100 })}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="Email"
+                {...register("Email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="tel"
+                placeholder="Mobile number"
+                {...register("Mobile number", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 12,
+                })}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="Event name"
+                {...register("Event name", {})}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="datetime"
+                placeholder="Event date"
+                {...register("Event date", {})}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="Event category"
+                {...register("Event category", {})}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="number"
+                placeholder="Number of people"
+                {...register("Number of people", {})}
+              />
+              <OutlinedInput
+                sx={{
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+                type="text"
+                placeholder="About event"
+                {...register("About event", {})}
+              />
 
-              <Stack direction="row" spacing={2} justifyContent="center">
-                <TextField
-                  required
-                  id="outlined-required"
-                  label="Required"
-                  defaultValue="Hello World"
-                />
-                <TextField
-                  required
-                  id="outlined-required"
-                  label="Required"
-                  defaultValue="Hello World"
-                />
-              </Stack>
-            </Box>
+              <OutlinedInput sx={{
 
-            <Box
-              sx={{
-                width: 300,
-                height: 300,
-                backgroundColor: "yellow",
-              }}
-            />
-          </Stack>
+              }} type="submit" />
+            </form>
         </Box>
       </Box>
 

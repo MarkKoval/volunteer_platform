@@ -9,7 +9,6 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { MyButton } from "../../modules/shared/components/For_All.styled";
 import Footer from "../../modules/shared/components/Footer";
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -49,8 +48,6 @@ export default function Photos() {
             spacing={2}
             justifyContent="center"
           >
-            <MyButton variant="contained">Main call to action</MyButton>
-            <MyButton variant="contained">Secondary action</MyButton>
           </Stack>
         </Container>
       </Box>
