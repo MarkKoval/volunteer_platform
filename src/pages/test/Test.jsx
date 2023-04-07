@@ -186,16 +186,25 @@ export default function Test() {
                   {...register("About event", {})}
                 />
               </Grid>
+
+              {/* Not work multiple */}
+
               <Grid item xs={6} md={6}>
+                <OutlinedInput
+                  fullWidth
+                  type="file"
+                  multiple
+                  accept="application/pdf, image/png"
+                  {...register("Photos", {})}
+                />
+              </Grid>
+              <Grid item xs={6} md={12}>
                 <OutlinedInput fullWidth type="submit" />
               </Grid>
             </Grid>
           </form>
         </Box>
       </Box>
-
-      {/* Breakpoint */}
-
       <Footer />
     </Box>
   );
