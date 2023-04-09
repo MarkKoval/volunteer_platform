@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-const pages = ["Organization", "Volunteer", "Photos", "Test"];
+const pages = ["Organization", "Volunteer", "Photos"];
 const settings = ["Profile", "Account", "Messages", "Logout"];
 
 function ResponsiveAppBar() {
@@ -58,8 +58,8 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
+              fontFamily: "Nunito",
+              fontWeight: 900,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
@@ -99,10 +99,10 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
+                  <Typography textAlign="center" fontFamily="Nunito">
                     <Link
                       to={`/${page}`}
-                      style={{ textDecoration: "none", color: "inherit" }}
+                      style={{ textDecoration: "none", color: "inherit", fontFamily: "Nunito"}}
                     >
                       {page}
                     </Link>
@@ -121,7 +121,7 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "Nunito",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -171,7 +171,7 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center" fontFamily="Nunito">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>

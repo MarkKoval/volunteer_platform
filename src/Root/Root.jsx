@@ -4,7 +4,6 @@ import Home from "../pages/Home/Home";
 import Organization from "../pages/Organization/Organization";
 import Volunteer from "../pages/Volunteer/Volunteer";
 import Photos from "../pages/Photos/Photos";
-import Test from "../pages/test/Test";
 import { BackgroundBox } from "../modules/shared/components/BackgroundBox.styled";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
         <Route path="Organization" element={<Organization />} />
         <Route path="Volunteer" element={<Volunteer />} />
         <Route path="Photos" element={<Photos />} />
-        <Route path="Test" element={<Test />} />
       </Routes>
     </BackgroundBox>
   );
