@@ -15,14 +15,6 @@ export default function Test() {
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
-
   return (
     <Box>
       <LineBox>
