@@ -25,6 +25,7 @@ export default function Buttons() {
             padding: "0 30px",
             fontSize: "18px",
             fontWeight: 700,
+            fontFamily: "Nunito",
           }}
         >
           <Link
@@ -47,6 +48,7 @@ export default function Buttons() {
             padding: "0 30px",
             fontSize: "18px",
             fontWeight: 700,
+            fontFamily: "Nunito",
           }}
         >
           <Link
