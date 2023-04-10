@@ -137,7 +137,7 @@ export default function Volunteer() {
           </CardActions>
         </Card>
       </Box>
-      <div>
+      <Box>
         <Dialog
           open={open}
           onClose={handleClose}
@@ -193,8 +193,7 @@ export default function Volunteer() {
             <Button onClick={handleClose}>Close</Button>
           </DialogActions>
         </Dialog>
-      </div>
-
+      </Box>
       <Footer />
     </Box>
   );
