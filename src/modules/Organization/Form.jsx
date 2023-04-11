@@ -106,7 +106,7 @@ export default function Form() {
           </Typography>
           <OutlinedInput
             fullWidth
-            type="tel"
+            type="text"
             placeholder="Organization"
             {...register("Organization", {
               required: true,
