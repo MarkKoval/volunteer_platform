@@ -109,9 +109,7 @@ export default function Form() {
             type="text"
             placeholder="Organization"
             {...register("Organization", {
-              required: true,
-              minLength: 6,
-              maxLength: 12,
+              required: true
             })}
           />
         </Grid>
