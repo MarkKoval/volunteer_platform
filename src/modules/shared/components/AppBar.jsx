@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import { fontSize } from "@mui/joy/styles/styleFunctionSx";
 
 const pages = ["Organization", "Volunteer", "Photos"];
 const settings = ["Profile", "Account", "Messages", "Logout"];
@@ -99,10 +100,13 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" fontFamily="Nunito">
+                  <Typography textAlign="center">
                     <Link
                       to={`/${page}`}
-                      style={{ textDecoration: "none", color: "inherit", fontFamily: "Nunito"}}
+                      style={{
+                        color: "inherit",
+                        fontFamily: "Nunito",
+                      }}
                     >
                       {page}
                     </Link>
@@ -135,11 +139,21 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Nunito",
+                }}
               >
                 <Link
                   to={`/${page}`}
-                  style={{ textDecoration: "none", color: "black", fontWeight: "700" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    fontWeight: "700",
+                    fontFamily: "Nunito",
+                  }}
                 >
                   {page}
                 </Link>
@@ -171,7 +185,9 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" fontFamily="Nunito">{setting}</Typography>
+                  <Typography textAlign="center" fontFamily="Nunito">
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
