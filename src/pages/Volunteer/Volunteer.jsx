@@ -47,40 +47,6 @@ export default function Volunteer() {
     },
   ];
 
-  const dialog = events.map((event) => (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogTitle id="alert-dialog-title"></DialogTitle>
-      <DialogContent>
-        <CardMedia component="img" height="250" image={event.image} />
-        <Typography
-          gutterBottom
-          variant="h4"
-          fontWeight="700"
-          fontFamily="Nunito"
-          textAlign="center"
-        >
-          {event.eventName}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          fontWeight="500"
-          fontFamily="Nunito"
-          fontSize="16px"
-        >
-          {event.eventDescribe}
-        </Typography>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose}>Close</Button>
-      </DialogActions>
-    </Dialog>
-  ));
 
   const card = events.map((event) => (
     <Card
@@ -159,7 +125,42 @@ export default function Volunteer() {
         </Button>
       </CardActions>
     </Card>
-    
+  ));
+
+
+  const dialog = events.map((event) => (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogTitle id="alert-dialog-title"></DialogTitle>
+      <DialogContent>
+        <CardMedia component="img" height="250" image={event.image} />
+        <Typography
+          gutterBottom
+          variant="h4"
+          fontWeight="700"
+          fontFamily="Nunito"
+          textAlign="center"
+        >
+          {event.eventName}
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          fontWeight="500"
+          fontFamily="Nunito"
+          fontSize="16px"
+        >
+          {event.eventDescribe}
+        </Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>Close</Button>
+      </DialogActions>
+    </Dialog>
   ));
 
   return (
