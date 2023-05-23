@@ -13,7 +13,6 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
-import { fontSize } from "@mui/joy/styles/styleFunctionSx";
 
 const pages = ["Organization", "Volunteer", "Photos"];
 const settings = ["Profile", "Account", "Messages", "Logout"];
